@@ -1,0 +1,1 @@
+{"_id" : "Provider3-Import-v1","type" : "Import","name" : "Provider3-Import","version" : 1,"dateModified" : "2018-12-10T00:00:00.000Z",    "description" : "Import data from CSV files into C3DP FHIR repository","parameters" : {"GP_EMIS_file_uri" : "file:///C:/c3cloud/test/EHR.csv",        "Lorenzo/Community_file_uri" : "file:///C:/c3cloud/test/GP.csv","patient" : ""}}

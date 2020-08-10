@@ -1,0 +1,2856 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "3600053215",
+        "gender": "male",
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/marital-status",
+              "code": "M",
+              "display": "Married"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "IP Spell",
+                "display": "Inpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-04-14T00:00:00+00:00",
+          "end": "2017-04-16T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "2",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "IP Spell",
+                "display": "Inpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-09-03T00:00:00+00:00",
+          "end": "2017-09-03T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "3",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-08T00:00:00+00:00",
+          "end": "2017-08-08T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-10T00:00:00+00:00",
+          "end": "2017-08-10T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "5",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-09-20T00:00:00+00:00",
+          "end": "2017-09-20T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "6",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-06-29T00:00:00+00:00",
+          "end": "2017-06-29T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "7",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-06-22T00:00:00+00:00",
+          "end": "2017-06-22T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "8",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-12-29T00:00:00+00:00",
+          "end": "2017-12-29T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-06-15T00:00:00+00:00",
+          "end": "2017-06-15T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "10",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-07-14T00:00:00+00:00",
+          "end": "2017-07-14T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "11",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-06-01T00:00:00+00:00",
+          "end": "2017-06-01T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "12",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-12-12T00:00:00+00:00",
+          "end": "2017-12-12T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "13",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-12-01T00:00:00+00:00",
+          "end": "2017-12-01T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "14",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-04-11T00:00:00+00:00",
+          "end": "2017-04-11T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "15",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-04-14T00:00:00+00:00",
+          "end": "2017-04-14T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "16",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-05-22T00:00:00+00:00",
+          "end": "2017-05-22T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "17",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-05-26T00:00:00+00:00",
+          "end": "2017-05-26T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "18",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-06-12T00:00:00+00:00",
+          "end": "2017-06-12T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "19",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-06-13T00:00:00+00:00",
+          "end": "2017-06-13T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "20",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-06-21T00:00:00+00:00",
+          "end": "2017-06-21T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "21",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-06-23T00:00:00+00:00",
+          "end": "2017-06-23T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "22",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-07-13T00:00:00+00:00",
+          "end": "2017-07-13T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "23",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "OP",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-11-14T00:00:00+00:00",
+          "end": "2017-11-14T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "24",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-16T00:00:00+00:00",
+          "end": "2017-08-16T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "25",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-22T00:00:00+00:00",
+          "end": "2017-08-22T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "26",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-09-02T00:00:00+00:00",
+          "end": "2017-09-03T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "27",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-10-09T00:00:00+00:00",
+          "end": "2017-10-09T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "28",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-10-19T00:00:00+00:00",
+          "end": "2017-10-19T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "29",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-05-25T00:00:00+00:00",
+          "end": "2017-05-25T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "30",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-12-19T00:00:00+00:00",
+          "end": "2017-12-19T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "31",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-12-22T00:00:00+00:00",
+          "end": "2017-12-23T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "32",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-09-02T00:00:00+00:00",
+          "end": "2017-09-02T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "33",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-30T00:00:00+00:00",
+          "end": "2017-08-30T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "34",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-30T00:00:00+00:00",
+          "end": "2017-08-30T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "35",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-12T00:00:00+00:00",
+          "end": "2017-08-12T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "36",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-28T00:00:00+00:00",
+          "end": "2017-08-28T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "37",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-22T00:00:00+00:00",
+          "end": "2017-08-22T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "38",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-20T00:00:00+00:00",
+          "end": "2017-08-20T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "39",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-09-01T00:00:00+00:00",
+          "end": "2017-09-01T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "40",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-30T00:00:00+00:00",
+          "end": "2017-08-30T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "41",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "AE",
+                "display": "Accident & Emergency"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-12-18T00:00:00+00:00",
+          "end": "2017-12-18T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "42",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-22T00:00:00+00:00",
+          "end": "2017-08-22T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "43",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-26T00:00:00+00:00",
+          "end": "2017-08-26T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "44",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-24T00:00:00+00:00",
+          "end": "2017-08-24T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "45",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-09-01T00:00:00+00:00",
+          "end": "2017-09-01T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "46",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-26T00:00:00+00:00",
+          "end": "2017-08-26T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "47",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-25T00:00:00+00:00",
+          "end": "2017-08-25T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "48",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-24T00:00:00+00:00",
+          "end": "2017-08-24T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "49",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-18T00:00:00+00:00",
+          "end": "2017-08-18T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "50",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-08-24T00:00:00+00:00",
+          "end": "2017-08-24T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "51",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-09-03T00:00:00+00:00",
+          "end": "2017-09-03T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "52",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-12-21T00:00:00+00:00",
+          "end": "2017-12-21T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "53",
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "Provider3:internal",
+                "code": "GAP COMMUNITY CONTACTS"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "period": {
+          "start": "2017-09-19T00:00:00+00:00",
+          "end": "2017-09-19T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "011",
+              "display": "Dressing*"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/14"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "21",
+              "display": "Observation/electrocardiogram, pulse oximetry/head injury/trends"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/15"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "06",
+              "display": "Splint"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/16"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "35",
+              "display": "Dressing/wound review"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/18"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "222",
+              "display": "Guidance/advice only - verbal"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/19"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "011",
+              "display": "Dressing*"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/20"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "21",
+              "display": "Observation/electrocardiogram, pulse oximetry/head injury/trends"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/21"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "222",
+              "display": "Guidance/advice only - verbal"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/22"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "514",
+              "display": "Medication administered - per rectum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/24"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "222",
+              "display": "Guidance/advice only - verbal"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/25"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "21",
+              "display": "Observation/electrocardiogram, pulse oximetry/head injury/trends"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/26"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "222",
+              "display": "Guidance/advice only - verbal"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/27"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "222",
+              "display": "Guidance/advice only - verbal"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/28"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "21",
+              "display": "Observation/electrocardiogram, pulse oximetry/head injury/trends"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/29"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "06",
+              "display": "Splint"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/30"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "18629005",
+              "display": "Medication administered - oral"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/31"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "178",
+              "display": "Intercellular cement antibody level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/32"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "14",
+              "display": "Congenital melanosis of sclera"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/33"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "178",
+              "display": "Intercellular cement antibody level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/34"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "21",
+              "display": "Observation/electrocardiogram, pulse oximetry/head injury/trends"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/35"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "14",
+              "display": "Congenital melanosis of sclera"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/36"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "14",
+              "display": "Congenital melanosis of sclera"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/37"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "14",
+              "display": "Congenital melanosis of sclera"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/38"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "410267000",
+              "display": "Occupational Therapy - OT activities of daily living equipment provision"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/41"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "178",
+              "display": "Intercellular cement antibody level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/45"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "14",
+              "display": "Congenital melanosis of sclera"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/46"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "178",
+              "display": "Intercellular cement antibody level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/47"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "178",
+              "display": "Intercellular cement antibody level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/48"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "14",
+              "display": "Congenital melanosis of sclera"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/49"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "code": {
+          "coding": [
+            {
+              "code": "14",
+              "display": "Congenital melanosis of sclera"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/50"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "L031",
+              "display": "Cellulitis of other parts of limb"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/1"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "R072",
+              "display": "Precordial pain"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/2"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "021038",
+              "display": "Contusion/abrasion - contusion-Face-Not applicable-Wound : lac / \n\nincised / bite : lower leg"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/14"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/15"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "42 818",
+              "display": "Description not found-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/16"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/18"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38",
+              "display": "Diagnosis not classifiable-Change of plaster / \n\nplaster check"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/19"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "021038",
+              "display": "Contusion/abrasion - contusion-Face-Not applicable-Wound : lac / \n\nincised / bite : lower leg"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/20"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/21"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/22"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "27 198",
+              "display": "Urological conditions (including cystitis)-Thoracic-Not applicable-Bruise / contusion \n\n/ abrasion : thigh"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/25"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/26"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/27"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/28"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/29"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "263308",
+              "display": "Gastrointestinal conditions - other-Thigh-Not applicable-Sprain / ligament \n\ninjury : thumb"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/30"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "38 368",
+              "display": "Diagnosis not classifiable-Multiple Site-Not applicable-Description not found"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/35"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "94902",
+              "display": "Initial patient assessment"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/38"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "70 048",
+              "display": "Description not found-Sprain / ligament \n\ninjury : wrist joint"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/41"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "94895",
+              "display": "Falls assessment"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/49"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "95502",
+              "display": "Waterlow pressure sore risk score"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3600053215",
+          "display": "Patient Name"
+        },
+        "context": {
+          "reference": "ENCOUNTER/53"
+        }
+      }
+    }
+  ]
+}

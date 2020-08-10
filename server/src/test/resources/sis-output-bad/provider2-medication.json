@@ -1,0 +1,54 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "SE162321000024-Cambio_Common_U:RcId:MedicationTreatment:101501",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.752.129.2.1.2.1",
+            "value": "SE162321000024-Cambio_Common_U:RcId:MedicationTreatment:101501"
+          }
+        ],
+        "status": "stopped",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.752.129.2.2.3.1.1",
+              "code": "B01AA03"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Joe Bloggs"
+        },
+        "note": [
+          {
+            "text": "ProductTradeName:Waran"
+          }
+        ],
+        "dosage": [
+          {
+            "text": "? tablett kl 20:00 tills vidare",
+            "route": {
+              "coding": [
+                {
+                  "system": "unknown coding system",
+                  "code": "A0025",
+                  "display": "oralt"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 2.5,
+              "unit": "mg"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

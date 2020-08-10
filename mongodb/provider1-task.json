@@ -1,0 +1,1 @@
+{"_id" : "Provider1-CDA-DBP-Import-v1","type" : "Import","name" : "Provider1-CDA-DBP-Import","version" : 1,"dateModified" : "2018-12-10T00:00:00.000Z","description" : "Import data by patient id from CDA and DBP services into C3DP FHIR repository","parameters" : {"patient" : ""}}

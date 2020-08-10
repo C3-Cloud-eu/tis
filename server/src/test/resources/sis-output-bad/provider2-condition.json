@@ -1,0 +1,58 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "987654",
+        "name": [
+          {
+            "text": "Test Doctor"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "SE162321000024-Cambio_Common_U:Diagnosis:76676:A222",
+        "identifier": [
+          {
+            "system": "urn:oid1.2.752.129.2.1.2.1",
+            "value": "SE162321000024-Cambio_Common_U:Diagnosis:76676:A222"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.752.116.1.1.1.1.3",
+              "code": "A222",
+              "display": "Gastrointestinal antrax"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Joe Bloggs"
+        },
+        "assertedDate": "2017-01-02T09:30:32+00:00",
+        "asserter": {
+          "reference": "Practitioner/987654",
+          "display": "Test Doctor"
+        }
+      }
+    }
+  ]
+}

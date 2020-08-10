@@ -1,0 +1,111 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "39747",
+        "name": [
+          {
+            "text": "Sven Svensson"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "SE162321000024-Cambio_Common_U:RcId:ChemistryResult:84155",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.752.129.2.1.2.1",
+            "value": "SE162321000024-Cambio_Common_U:RcId:ChemistryResult:84155"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.752.108.1",
+              "code": "NPU03568",
+              "display": "B-Trombocyter"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/198611062384",
+          "display": "Ulla Alm"
+        },
+        "effectiveDateTime": "2017-01-02T12:03:06+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/39747",
+            "display": "Sven Svensson"
+          }
+        ],
+        "valueQuantity": {
+          "value": 200
+        },
+        "comment": "B-Trom kan vara lågt.\n Gruppkommentar: Gruppkommentar."
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "SE162321000024-Cambio_Common_U:RcId:ChemistryResult:84148",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.752.129.2.1.2.1",
+            "value": "SE162321000024-Cambio_Common_U:RcId:ChemistryResult:84148"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.752.108.1",
+              "code": "SWE05074",
+              "display": "B-Hemoglobin(Hb)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/198611062384",
+          "display": "Ulla Alm"
+        },
+        "effectiveDateTime": "2017-01-02T12:03:06+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/39747",
+            "display": "Sven Svensson"
+          }
+        ],
+        "valueQuantity": {
+          "value": 200
+        },
+        "comment": "Sverat ser OK ut.\n Gruppkommentar: Gruppkommentar."
+      }
+    }
+  ]
+}

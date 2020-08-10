@@ -1,0 +1,1567 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://{{care_planning_url}}/c3cloud/fhir-secure/Patient/123456",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "123456",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.2.1",
+            "value": "123456"
+          }
+        ],
+        "name": [
+          {
+            "family": "FICTICIO ACTIVO",
+            "given": [
+              "CIUDADANO"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "012345678"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1970-01-01",
+        "address": [
+          {
+            "line": [
+              ""
+            ],
+            "city": "",
+            "state": "",
+            "postalCode": ""
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/123456"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.2",
+              "code": "532.90",
+              "display": "ULCERA, ULCERACION DOUDENO"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "assertedDate": "1997-02-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083789"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ELIQUIS 5MG 60 COMPRIMIDO RECUBIERTO CON PELICULA"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-02-13T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 2,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083788"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ELIQUIS 5MG 60 COMPRIMIDO RECUBIERTO CON PELICULA"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-02-13T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 2,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083781"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "RIMACTAN 300MG 60 CAPSULAS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-05-14T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 2,
+              "unit": "CAPSULA"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083780"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "RIMACTAN 300MG 60 CAPSULAS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-05-14T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 2,
+              "unit": "CAPSULA"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083798"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ADOFEN 20MG 56 COMPRIMIDOS DISPERSABLES"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083799"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ADOFEN 20MG 56 COMPRIMIDOS DISPERSABLES"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083777"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "BUDESONIDA ALDO UNION 200MCG AEROSOL  6ML (120 DOSIS)"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_12_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 12,
+                "periodUnit": "h"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "INHALATORIA"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "INHALACION"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083776"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "BUDESONIDA ALDO UNION 200MCG AEROSOL  6ML (120 DOSIS)"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_12_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 12,
+                "periodUnit": "h"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "INHALATORIA"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "INHALACION"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083802"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "CLEBOPRIDA 0,5MG 60 COMPRIMIDOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_4_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 4,
+                "periodUnit": "h"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083803"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "CLEBOPRIDA 0,5MG 60 COMPRIMIDOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_4_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 4,
+                "periodUnit": "h"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083790"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "PIOGLITAZONA  15MG 56 COMPRIMIDOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-02-13T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083791"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "PIOGLITAZONA  15MG 56 COMPRIMIDOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-02-13T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083794"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "PLAVIX 75MG 28 COMPRIMIDOS RECUBIERTOS CON PELICULA"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083795"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "PLAVIX 75MG 28 COMPRIMIDOS RECUBIERTOS CON PELICULA"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083792"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ELIQUIS 2,5MG 60 COMPRIMIDOS RECUBIERTOS CON PELICULA"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2017-11-29T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 2,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083793"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ELIQUIS 2,5MG 60 COMPRIMIDOS RECUBIERTOS CON PELICULA"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2017-11-29T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 2,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083783"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "EZETROL 10MG 28 COMPRIMIDOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083782"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "EZETROL 10MG 28 COMPRIMIDOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083774"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "DERCUTANE 30MG 30 CAPSULAS BLANDAS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2017-10-31T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "CAPSULA"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083775"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "DERCUTANE 30MG 30 CAPSULAS BLANDAS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2017-10-31T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "CAPSULA"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083801"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ESPIDIFEN 600MG 40 SOBRES GRANULADO SOLUCION ORAL SABOR MENTA EFG"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2017-11-26T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:en_desayuno,_comida_y_cena",
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "SOBRE"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083800"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ESPIDIFEN 600MG 40 SOBRES GRANULADO SOLUCION ORAL SABOR MENTA EFG"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2017-11-26T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:en_desayuno,_comida_y_cena",
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "SOBRE"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083796"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "PROTELOS 2G 28 SOBRES GRANULADOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "SOBRE"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083797"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "PROTELOS 2G 28 SOBRES GRANULADOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2018-11-10T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_24_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "SOBRE"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083779"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ASTEFOR 400/30MG 30 COMPRIMIDOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2017-11-18T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_6_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 6,
+                "periodUnit": "h"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20173200083778"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "ASTEFOR 400/30MG 30 COMPRIMIDOS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-11-16T00:00:00+00:00",
+          "end": "2017-11-18T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_6_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 6,
+                "periodUnit": "h"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    }
+  ]
+}

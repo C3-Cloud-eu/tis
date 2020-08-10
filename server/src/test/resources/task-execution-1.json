@@ -1,0 +1,9 @@
+{
+  "taskId" : "Provider1",
+  "parameters" : {
+    "Patient" : "[1, 2, 3]"
+  },
+  "startTime" : "2018-05-18T10:34:16.183",
+  "id" : "5afe9e1869b4522d08fdb74f",
+  "state" : "Running"
+}

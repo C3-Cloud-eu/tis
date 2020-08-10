@@ -1,0 +1,727 @@
+<?xml-stylesheet type="text/xsl" href="CDA_Profesional.xsl"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDASchema/CDA.xsd" xmlns:voc="urn:hl7-org:v3/voc" xmlns="urn:hl7-org:v3">
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="2.16.724.4.50.1" />
+  <id root="2.16.724.4.16.1.100.3.1" extension="1000000000037863" />
+  <code code="11488-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Consultation note" />
+  <title>Historia Clínica Resumida</title>
+  <effectiveTime value="20170626110158" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+  <languageCode code="es-ES" />
+  <setId root="2.16.724.4.16.1.100.3.1.1" extension="2000000000001671" />
+  <versionNumber value="939" />
+  <recordTarget>
+    <patientRole>
+      <id root="2.16.724.4.16.1.100.2.1" extension="10574682" />
+      <id nullFlavor="UNK" />
+      <id nullFlavor="UNK" />
+      <id root="1.3.6.1.4.1.19126.4" extension="481004103386" />
+      <id root="2.16.724.4.41" extension="802494" />
+      <id nullFlavor="UNK" />
+      <addr use="HP">
+        <state></state>
+        <city></city>
+        <postalCode></postalCode>
+        <streetNameType></streetNameType>
+        <streetName></streetName>
+        <houseNumber></houseNumber>
+        <additionalLocator>001</additionalLocator>
+        <additionalLocator>A</additionalLocator>
+      </addr>
+      <telecom value="tel:000000000" />
+      <patient>
+        <name>
+          <family>FICTICIO</family>
+          <family>ACTIVO</family>
+          <given>CIUDADANO</given>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" />
+        <birthTime value="19770622" />
+      </patient>
+      <providerOrganization>
+        <name>Provider1-Servicio Vasco de Salud</name>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20170626" />
+    <assignedAuthor>
+      <id root="2.16.724.4.16" />
+      <assignedAuthoringDevice>
+        <code code="B40" codeSystem="2.16.724.4.16.1.100.6.2" codeSystemName="Clasificación sistema" displayName="OSABIDE GLOBAL" />
+        <softwareName>B40-OSABIDE GLOBAL</softwareName>
+      </assignedAuthoringDevice>
+    </assignedAuthor>
+  </author>
+  <informant>
+    <relatedEntity classCode="CON">
+      <relatedPerson>
+        <name>
+          <family>Cuidador Principal: Ortiz de Villafranca</family>
+          <family>Etxebarrieta</family>
+          <given>Arkaitz</given>
+        </name>
+      </relatedPerson>
+    </relatedEntity>
+  </informant>
+  <custodian>
+    <assignedCustodian classCode="ASSIGNED">
+      <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id root="2.16.724.4.16" />
+        <name>Provider1-Servicio Vasco de Salud</name>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator>
+    <time value="20170626110201" />
+    <signatureCode code="N" />
+    <assignedEntity>
+      <id nullFlavor="UNK" />
+    </assignedEntity>
+  </legalAuthenticator>
+  <documentationOf>
+    <serviceEvent>
+      <effectiveTime>
+        <high value="20170607" />
+      </effectiveTime>
+    </serviceEvent>
+  </documentationOf>
+  <relatedDocument typeCode="RPLC">
+    <parentDocument>
+      <id root="2.16.724.4.16.1.100.3.1" extension="1000000000037408" />
+      <setId root="2.16.724.4.16.1.100.3.1.1" extension="2000000000001671" />
+      <versionNumber value="938" />
+    </parentDocument>
+  </relatedDocument>
+  <component>
+    <structuredBody>
+      <component>
+        <templateId root="2.16.724.4.50.1.1" />
+        <section>
+          <title>Existe información reservada por decisión del paciente:</title>
+          <text>SI</text>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.2" />
+        <section>
+          <title>Existe documento de instrucciones previas (DVA):</title>
+          <text>SI</text>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.4" />
+        <section>
+          <code code="8658-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Alergias, reacciones adversas, alertas" />
+          <title>Alergias</title>
+          <text><list><item>Aines</item><item>Grupo PARA</item><item>Caracoles</item></list></text>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.5" />
+        <section>
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Historial de vacunaciones" />
+          <title>Vacunaciones</title>
+          <text><list><item>Vacuna Triple Vírica (SRP) Se niega 16/10/2015</item><item>Vacuna Gripe Puesta 16/10/2015</item><item>Vacuna Meningococo C (Conjugada) Dosis Extraordinaria 16/10/2015</item><item>Vacuna Hepatitis B No procede 16/10/2015</item><item>Vacuna DTP (Difteria-Tétanos-Tos ferina) 1ª dosis 16/10/2015</item><item>Vacuna BCG 1ª dosis 16/10/2013</item><item>Vacuna Td (Tétanos-difteria adutos) Dosis 16 años 16/10/2010</item></list></text>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.6" />
+        <section>
+          <code code="11348-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Historial de enfermedades" />
+          <title>Problemas Resueltos, Cerrados o Inactivos</title>
+          <text><list><item>ENFERMEDAD HODGKIN SIN ESPECIFICAR ABDOMEN<content styleCode="BOLD">Fecha: 05/05/2015</content></item><item>CORONAVIRUS ASOCIADO A SARS<content styleCode="BOLD">Fecha: 31/12/2014</content></item><item>Prueba Motivo Consulta <content styleCode="BOLD">Fecha: 15/04/2013</content></item><item>POLIMEDICADO<content styleCode="BOLD">Fecha: 01/10/2012</content></item><item>ENTERITIS ORIGEN PRESUMIBLEMENTE INFECCIOSO<content styleCode="BOLD">Fecha: 26/02/2012</content></item></list></text>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.7" />
+        <section>
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Lista de problemas" />
+          <title>Problemas y Episodios Activos</title>
+          <text><list><item ID="pr1">No disponible<content styleCode="BOLD">Fecha: 18/10/2016</content></item><item ID="pr2">integración<content styleCode="BOLD">Fecha: 09/02/2015</content></item><item ID="pr3">ABRASION DENTAL<content styleCode="BOLD">Fecha: 01/01/2015</content></item><item ID="pr4">GRIPE CON NEUMONIA<content styleCode="BOLD">Fecha: 01/12/2014</content></item><item ID="pr5">CARCINOMA DE CANAL ANAL<content styleCode="BOLD">Fecha: 01/11/2014</content></item><item ID="pr6">COMPLICACIONES QUIRURGICAS-CARDIACAS<content styleCode="BOLD">Fecha: 29/09/2014</content></item><item ID="pr7">CONTUSION DE ESPALDA<content styleCode="BOLD">Fecha: 12/08/2013</content></item><item ID="pr8">enfermera hermana<content styleCode="BOLD">Fecha: 29/05/2013</content></item></list></text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="44100-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICAL PROBLEM" />
+              <effectiveTime value="20161018" />
+              <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9-CM" displayName="No disponible">
+                <originalText>
+                  <reference value="#pr1" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="44100-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICAL PROBLEM" />
+              <effectiveTime value="20150209" />
+              <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9-CM" displayName="integración">
+                <originalText>
+                  <reference value="#pr2" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="44100-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICAL PROBLEM" />
+              <effectiveTime value="20150101" />
+              <value xsi:type="CD" code="521.2" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9-CM" displayName="ABRASION DENTAL">
+                <originalText>
+                  <reference value="#pr3" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="44100-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICAL PROBLEM" />
+              <effectiveTime value="20141201" />
+              <value xsi:type="CD" code="487.0" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9-CM" displayName="GRIPE CON NEUMONIA">
+                <originalText>
+                  <reference value="#pr4" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="44100-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICAL PROBLEM" />
+              <effectiveTime value="20141101" />
+              <value xsi:type="CD" code="230.5" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9-CM" displayName="CARCINOMA DE CANAL ANAL">
+                <originalText>
+                  <reference value="#pr5" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="44100-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICAL PROBLEM" />
+              <effectiveTime value="20140929" />
+              <value xsi:type="CD" code="997.1" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9-CM" displayName="COMPLICACIONES QUIRURGICAS-CARDIACAS">
+                <originalText>
+                  <reference value="#pr6" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="44100-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICAL PROBLEM" />
+              <effectiveTime value="20130812" />
+              <value xsi:type="CD" code="922.31" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9-CM" displayName="CONTUSION DE ESPALDA">
+                <originalText>
+                  <reference value="#pr7" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="44100-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICAL PROBLEM" />
+              <effectiveTime value="20130529" />
+              <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9-CM" displayName="enfermera hermana">
+                <originalText>
+                  <reference value="#pr8" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.8" />
+        <section>
+          <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Recomendaciones" />
+          <title>Recomendaciones</title>
+          <text>Recomendaciones no conocidas</text>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.9" />
+        <section>
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+          <title>Fármacos</title>
+          <text><table><thead><tr><th>Medicamento</th><th>Posología</th><th>Vía Administración</th><th /><th>Periodo</th><th /></tr><tr><th /><th /><th /><th>Desde</th><th>Hasta</th><th>Duración </th></tr></thead><tbody><tr><td><list><item>OMEPRAZOL 20MG 14 CAPSULAS</item></list></td><td>1 CAPSULA al acostarse</td><td>ORAL</td><td>07/06/2017</td><td>04/09/2017</td><td>89 días</td></tr><tr><td><list><item>LACTULOSA 10G 10 SOBRES SOL ORAL 15ML</item></list></td><td>1 SOBRE al acostarse</td><td>ORAL</td><td>07/06/2017</td><td>04/09/2017</td><td>89 días</td></tr><tr><td><list><item>OLANZAPINA 5MG 28 COMPRIMIDOS BUCODISPERSA</item></list></td><td>1 COMPRIMIDO al acostarse</td><td>ORAL</td><td>07/06/2017</td><td>04/10/2017</td><td>119 días</td></tr><tr><td><list><item>PARACETAMOL 500MG 24 CAPSULAS</item></list></td><td>1 CAPSULA cada 8 horas</td><td>ORAL</td><td>07/06/2017</td><td>03/12/2017</td><td>179 días</td></tr><tr><td><list><item>CLOPIDOGREL 75MG 28 COMPRIMIDOS RECUBIERTO</item></list></td><td>1 COMPRIMIDO en desayuno, comida, merienda y cena</td><td>ORAL</td><td>07/06/2017</td><td>01/06/2018</td><td>359 días</td></tr></tbody></table></text>
+          <entry typeCode="COMP" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+              <id root="2.16.724.4.16.1.100.6.3" extension="20171580081714" />
+              <text nullFlavor="UNK" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20170607" />
+                <high value="20170904" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period unit="al_acostarse" />
+              </effectiveTime>
+              <routeCode code="26643006" codeSystem="2.16.724.4.21.5.8.23" codeSystemName="SNOMED CT/ES" displayName="ORAL" />
+              <doseQuantity unit="CAPSULA" value="1" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                    <code codeSystem="2.16.724.4.21.5.15" codeSystemName="Nomenclator de prescripción AEMPS" displayName="OMEPRAZOL 20MG 14 CAPSULAS" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="COMP" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+              <id root="2.16.724.4.16.1.100.6.3" extension="20171580081718" />
+              <text nullFlavor="UNK" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20170607" />
+                <high value="20170904" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period unit="al_acostarse" />
+              </effectiveTime>
+              <routeCode code="26643006" codeSystem="2.16.724.4.21.5.8.23" codeSystemName="SNOMED CT/ES" displayName="ORAL" />
+              <doseQuantity unit="SOBRE" value="1" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                    <code codeSystem="2.16.724.4.21.5.15" codeSystemName="Nomenclator de prescripción AEMPS" displayName="LACTULOSA 10G 10 SOBRES SOL ORAL 15ML" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="COMP" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+              <id root="2.16.724.4.16.1.100.6.3" extension="20171580081716" />
+              <text nullFlavor="UNK" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20170607" />
+                <high value="20171004" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period unit="al_acostarse" />
+              </effectiveTime>
+              <routeCode code="26643006" codeSystem="2.16.724.4.21.5.8.23" codeSystemName="SNOMED CT/ES" displayName="ORAL" />
+              <doseQuantity unit="COMPRIMIDO" value="1" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                    <code codeSystem="2.16.724.4.21.5.15" codeSystemName="Nomenclator de prescripción AEMPS" displayName="OLANZAPINA 5MG 28 COMPRIMIDOS BUCODISPERSA" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="COMP" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+              <id root="2.16.724.4.16.1.100.6.3" extension="20171580081715" />
+              <text nullFlavor="UNK" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20170607" />
+                <high value="20171203" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period unit="cada_8_horas" />
+              </effectiveTime>
+              <routeCode code="26643006" codeSystem="2.16.724.4.21.5.8.23" codeSystemName="SNOMED CT/ES" displayName="ORAL" />
+              <doseQuantity unit="CAPSULA" value="1" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                    <code codeSystem="2.16.724.4.21.5.15" codeSystemName="Nomenclator de prescripción AEMPS" displayName="PARACETAMOL 500MG 24 CAPSULAS" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="COMP" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+              <id root="2.16.724.4.16.1.100.6.3" extension="20171580081719" />
+              <text nullFlavor="UNK" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20170607" />
+                <high value="20180601" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period unit="en_desayuno,_comida,_merienda_y_cena" />
+              </effectiveTime>
+              <routeCode code="26643006" codeSystem="2.16.724.4.21.5.8.23" codeSystemName="SNOMED CT/ES" displayName="ORAL" />
+              <doseQuantity unit="COMPRIMIDO" value="1" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                    <code codeSystem="2.16.724.4.21.5.15" codeSystemName="Nomenclator de prescripción AEMPS" displayName="CLOPIDOGREL 75MG 28 COMPRIMIDOS RECUBIERTO" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.10" />
+        <section>
+          <code code="42555-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnosticos enfermeros activos" />
+          <title>Diagnósticos Enfermeros Activos</title>
+          <text><list><item ID="diag1">Ansiedad</item><item ID="diag2">Baja autoestima situacional</item><item ID="diag3">Deterioro de la integridad cutánea</item><item ID="diag4">Exceso de volumen de líquidos</item><item ID="diag5">Riesgo de deterioro de la integridad cutánea</item><item ID="diag6">Riesgo de deterioro de la integridad cutánea</item><item ID="diag7">Riesgo de infección</item><item ID="diag8">Riesgo de lesión</item><item ID="diag9">Riesgo de retención urinaria</item><item ID="diag10">Riesgo de sangrado</item></list></text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00146" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Ansiedad">
+                <originalText>
+                  <reference value="#diag1" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00120" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Baja autoestima situacional">
+                <originalText>
+                  <reference value="#diag2" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00046" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Deterioro de la integridad cutánea">
+                <originalText>
+                  <reference value="#diag3" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00026" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Exceso de volumen de líquidos">
+                <originalText>
+                  <reference value="#diag4" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00047" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Riesgo de deterioro de la integridad cutánea">
+                <originalText>
+                  <reference value="#diag5" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00047" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Riesgo de deterioro de la integridad cutánea">
+                <originalText>
+                  <reference value="#diag6" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00004" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Riesgo de infección">
+                <originalText>
+                  <reference value="#diag7" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00035" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Riesgo de lesión">
+                <originalText>
+                  <reference value="#diag8" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" displayName="Riesgo de retención urinaria">
+                <originalText>
+                  <reference value="#diag9" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DISDX" codeSystem="2.16.840.1.113883.3.7.1.16" codeSystemName="LOINC" displayName="Diagnostico" />
+              <value xsi:type="CD" code="00206" codeSystem="2.16.840.1.113883.6.204" codeSystemName="NANDA" displayName="Riesgo de sangrado">
+                <originalText>
+                  <reference value="#diag10" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.11" />
+        <section>
+          <code code="42555-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Resultados de enfermeria" />
+          <title>Resultados de Enfermería</title>
+          <text><list><item ID="res1">Autoestima</item><item ID="res2">Eliminación urinaria</item><item ID="res3">Estado neurológico</item><item ID="res4">Función sensitiva: visión</item><item ID="res5">Integridad tisular: piel y membranas mucosas</item><item ID="res6">Integridad tisular: piel y membranas mucosas</item><item ID="res7">Nivel de ansiedad</item><item ID="res8">Severidad de la pérdida de sangre</item><item ID="res9">Severidad de la sobrecarga de líquidos</item></list></text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="1205" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Autoestima">
+                <originalText>
+                  <reference value="#res1" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="0503" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Eliminación urinaria">
+                <originalText>
+                  <reference value="#res2" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="0909" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Estado neurológico">
+                <originalText>
+                  <reference value="#res3" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="2404" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Función sensitiva: visión">
+                <originalText>
+                  <reference value="#res4" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="1101" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Integridad tisular: piel y membranas mucosas">
+                <originalText>
+                  <reference value="#res5" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="1101" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Integridad tisular: piel y membranas mucosas">
+                <originalText>
+                  <reference value="#res6" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="1211" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Nivel de ansiedad">
+                <originalText>
+                  <reference value="#res7" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="0413" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Severidad de la pérdida de sangre">
+                <originalText>
+                  <reference value="#res8" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="0603" codeSystem="2.16.840.1.113883.6.16" codeSystemName="NOC" displayName="Severidad de la sobrecarga de líquidos">
+                <originalText>
+                  <reference value="#res9" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.12" />
+        <section>
+          <code code="42555-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Intervenciones de enfermeria" />
+          <title>Intervenciones de Enfermería</title>
+          <text><list><item ID="inter1">Apoyo emocional</item><item ID="inter2">Control de hemorragias</item><item ID="inter3">Control de infecciones</item><item ID="inter4">Cuidados de la retención urinaria</item><item ID="inter5">Cuidados de las heridas</item><item ID="inter6">Cuidados de los ojos</item><item ID="inter7">Disminución de la ansiedad</item><item ID="inter8">Manejo de las convulsiones</item><item ID="inter9">Monitorización de líquidos</item><item ID="inter10">Precauciones contra las convulsiones</item><item ID="inter11">Prevención de úlceras por presión</item><item ID="inter12">Prevención de úlceras por presión</item><item ID="inter13">Vigilancia</item></list></text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="5270" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Apoyo emocional">
+                <originalText>
+                  <reference value="#inter1" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="4160" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Control de hemorragias">
+                <originalText>
+                  <reference value="#inter2" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="6540" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Control de infecciones">
+                <originalText>
+                  <reference value="#inter3" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="0620" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Cuidados de la retención urinaria">
+                <originalText>
+                  <reference value="#inter4" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="3660" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Cuidados de las heridas">
+                <originalText>
+                  <reference value="#inter5" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="1650" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Cuidados de los ojos">
+                <originalText>
+                  <reference value="#inter6" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="5820" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Disminución de la ansiedad">
+                <originalText>
+                  <reference value="#inter7" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="2680" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Manejo de las convulsiones">
+                <originalText>
+                  <reference value="#inter8" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="4130" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Monitorización de líquidos">
+                <originalText>
+                  <reference value="#inter9" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="2690" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Precauciones contra las convulsiones">
+                <originalText>
+                  <reference value="#inter10" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="3540" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Prevención de úlceras por presión">
+                <originalText>
+                  <reference value="#inter11" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="3540" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Prevención de úlceras por presión">
+                <originalText>
+                  <reference value="#inter12" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code nullFlavor="NA" />
+              <value xsi:type="CD" code="6650" codeSystem="2.16.840.1.113883.6.15" codeSystemName="NIC" displayName="Vigilancia">
+                <originalText>
+                  <reference value="#inter13" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <templateId root="2.16.724.4.50.1.13" />
+        <section>
+          <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Alergias, reacciones adversas, alertas" />
+          <title>Alertas</title>
+          <text><list><item>ALERTA SOCIAL: Malos Tratos</item><item>BAJO ESTUDIO O ENSAYO CLÍNICO</item><item>PORTADOR DE DISPOSITIVOS: Ostomías - Gastrostomía</item><item>TRASTORNOS DEL METABOLISMO: Trastorno del metabolismo de los ácidos grasos / cuerpos cetónicos - Déficit Del Transporte De Carnitina</item></list></text>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

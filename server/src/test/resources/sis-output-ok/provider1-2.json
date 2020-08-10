@@ -1,0 +1,684 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "123456",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.2.1",
+            "value": "123456"
+          }
+        ],
+        "name": [
+          {
+            "family": "FICTICIO ACTIVO",
+            "given": [
+              "CIUDADANO"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "000000000"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1970-01-01",
+        "address": [
+          {
+            "line": [
+              "Test Street"
+            ],
+            "city": "Test City",
+            "state": "Test State",
+            "postalCode": "12345"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.2",
+              "code": "521.2",
+              "display": "ABRASION DENTAL"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "assertedDate": "2015-01-01T00:00:00+00:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.2",
+              "code": "487.0",
+              "display": "GRIPE CON NEUMONIA"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "assertedDate": "2014-12-01T00:00:00+00:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.2",
+              "code": "230.5",
+              "display": "CARCINOMA DE CANAL ANAL"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "assertedDate": "2014-11-01T00:00:00+00:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.2",
+              "code": "997.1",
+              "display": "COMPLICACIONES QUIRURGICAS-CARDIACAS"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "assertedDate": "2014-09-29T00:00:00+00:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.2",
+              "code": "922.31",
+              "display": "CONTUSION DE ESPALDA"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "assertedDate": "2013-08-12T00:00:00+00:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20171580081714"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "OMEPRAZOL 20MG 14 CAPSULAS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-06-07T00:00:00+00:00",
+          "end": "2017-09-04T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:al_acostarse",
+            "timing": {
+              "repeat": {
+                "when": [
+                  "HS"
+                ]
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "CAPSULA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20171580081718"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "LACTULOSA 10G 10 SOBRES SOL ORAL 15ML"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-06-07T00:00:00+00:00",
+          "end": "2017-09-04T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:al_acostarse",
+            "timing": {
+              "repeat": {
+                "when": [
+                  "HS"
+                ]
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "SOBRE"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20171580081716"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "OLANZAPINA 5MG 28 COMPRIMIDOS BUCODISPERSA"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-06-07T00:00:00+00:00",
+          "end": "2017-10-04T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:al_acostarse",
+            "timing": {
+              "repeat": {
+                "when": [
+                  "HS"
+                ]
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20171580081715"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "PARACETAMOL 500MG 24 CAPSULAS"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-06-07T00:00:00+00:00",
+          "end": "2017-12-03T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:cada_8_horas",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 8,
+                "periodUnit": "h"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "CAPSULA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.724.4.16.1.100.6.3",
+            "value": "20171580081719"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.724.4.21.5.15",
+              "display": "CLOPIDOGREL 75MG 28 COMPRIMIDOS RECUBIERTO"
+            }
+          ]
+        },
+        "effectivePeriod": {
+          "start": "2017-06-07T00:00:00+00:00",
+          "end": "2018-06-01T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "original unit text:en_desayuno,_comida,_merienda_y_cena",
+            "timing": {
+              "repeat": {
+                "when": [
+                  "C"
+                ]
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.724.4.21.5.8.23",
+                  "code": "26643006",
+                  "display": "ORAL"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 1,
+              "unit": "COMPRIMIDO"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00146",
+              "display": "Ansiedad"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00120",
+              "display": "Baja autoestima situacional"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00046",
+              "display": "Deterioro de la integridad cutánea"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00026",
+              "display": "Exceso de volumen de líquidos"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00047",
+              "display": "Riesgo de deterioro de la integridad cutánea"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00047",
+              "display": "Riesgo de deterioro de la integridad cutánea"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00004",
+              "display": "Riesgo de infección"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00035",
+              "display": "Riesgo de lesión"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "42555-3",
+                "display": "Event description.general nursing care "
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.204",
+              "code": "00206",
+              "display": "Riesgo de sangrado"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "[CIUDADANO] FICTICIO ACTIVO"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,849 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://{{care_planning_url}}/c3cloud/fhir-secure/Patient/123456",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "123456",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.c3-cloud.eu/Identifier/real",
+            "value": "123456"
+          },
+          {
+            "system": "http://www.c3-cloud.eu/Identifier/pseudonym",
+            "value": "4"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Tablet",
+            "given": [
+              "Tony"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1974-07-01",
+        "address": [
+          {
+            "line": [
+              "Tony Tablet Street"
+            ],
+            "postalCode": "TR4 9RE"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/marital-status",
+              "code": "M",
+              "display": "Married"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/123456"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "d9918df8-438e-434c-89da-33e5a8fbac33",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Warwick Urgent Nursing"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2018-10-07T00:00:00+00:00",
+          "end": "2018-10-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/d9918df8-438e-434c-89da-33e5a8fbac33"
+        },
+        "onsetPeriod": {
+          "start": "2018-10-07T00:00:00+00:00",
+          "end": "2018-10-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "b9ae564b-45cb-42e4-a004-a6c6fbad01d9",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "in-progress",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2019-05-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/b9ae564b-45cb-42e4-a004-a6c6fbad01d9"
+        },
+        "onsetPeriod": {
+          "start": "2019-05-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "6b3abc13-d1da-43c7-a5e5-851ab494109d",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "in-progress",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2020-03-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/6b3abc13-d1da-43c7-a5e5-851ab494109d"
+        },
+        "onsetPeriod": {
+          "start": "2020-03-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0c2b16d9-bbd9-4415-be94-0b177a36b610",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2018-10-07T00:00:00+00:00",
+          "end": "2018-10-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/0c2b16d9-bbd9-4415-be94-0b177a36b610"
+        },
+        "onsetPeriod": {
+          "start": "2018-10-07T00:00:00+00:00",
+          "end": "2018-10-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9abe14bf-e4d3-449b-9ead-a6d11cb7aa54",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "in-progress",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2020-07-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/9abe14bf-e4d3-449b-9ead-a6d11cb7aa54"
+        },
+        "onsetPeriod": {
+          "start": "2020-07-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "78e4a33a-6015-4e7f-8a58-c5a097247877",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "in-progress",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2020-07-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/78e4a33a-6015-4e7f-8a58-c5a097247877"
+        },
+        "onsetPeriod": {
+          "start": "2020-07-07T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "03c14420-87be-435f-a601-ebae6d6e37f0",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "in-progress",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2019-06-09T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/03c14420-87be-435f-a601-ebae6d6e37f0"
+        },
+        "onsetPeriod": {
+          "start": "2019-06-09T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "40c6ffe8-9d43-4e17-b7fb-7b53d0d3ca1c",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2018-03-09T00:00:00+00:00",
+          "end": "2018-03-09T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/40c6ffe8-9d43-4e17-b7fb-7b53d0d3ca1c"
+        },
+        "onsetPeriod": {
+          "start": "2018-03-09T00:00:00+00:00",
+          "end": "2018-03-09T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "5478a4b2-60a6-4b05-a09d-1538b4dab261",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2018-05-09T00:00:00+00:00",
+          "end": "2018-05-09T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/5478a4b2-60a6-4b05-a09d-1538b4dab261"
+        },
+        "onsetPeriod": {
+          "start": "2018-05-09T00:00:00+00:00",
+          "end": "2018-05-09T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "c814f830-0dcb-4c52-b6b1-458d71cb600c",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:gl:0.1"
+            }
+          ]
+        },
+        "status": "in-progress",
+        "type": [
+          {
+            "text": "provider1_HomeFirst South Therapy"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "period": {
+          "start": "2019-07-10T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "UNKNOWN",
+              "code": "43",
+              "display": "Musculoskeletal Problems (SNOMED)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/123456",
+          "display": "Tony Tablet"
+        },
+        "context": {
+          "reference": "ENCOUNTER/c814f830-0dcb-4c52-b6b1-458d71cb600c"
+        },
+        "onsetPeriod": {
+          "start": "2019-07-10T00:00:00+00:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AuditEvent",
+        "type": {
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "code": "110107",
+          "display": "Import"
+        },
+        "subtype": [
+          {
+            "system": "http://www.c3-cloud.eu/fhir/audit-subtype",
+            "code": "record-sync",
+            "display": "Patient record sync"
+          }
+        ],
+        "action": "U",
+        "recorded": "2018-12-05T09:46:00.875+00:00",
+        "outcome": "0",
+        "agent": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://dicom.nema.org/resources/ontology/DCM",
+                    "code": "110152",
+                    "display": "Source Role ID"
+                  }
+                ]
+              }
+            ],
+            "userId": {
+              "value": "tis.c3-cloud.eu"
+            },
+            "name": "C3-Cloud TIS",
+            "requestor": true
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://dicom.nema.org/resources/ontology/DCM",
+                    "code": "110152",
+                    "display": "Destination Role ID"
+                  }
+                ]
+              }
+            ],
+            "userId": {
+              "value": "fhir.c3-cloud.eu"
+            },
+            "name": "C3-Cloud FHIR Repository",
+            "requestor": false,
+            "network": {
+              "address": "https://{{care_planning_app}}/c3cloud/fhir-secure/",
+              "type": "2"
+            }
+          }
+        ],
+        "source": {
+          "site": "C3-Cloud TIS",
+          "identifier": {
+            "value": "tis.c3-cloud.eu"
+          }
+        },
+        "entity": [
+          {
+            "reference": {
+              "reference": "Patient/123456"
+            },
+            "type": {
+              "system": "http://hl7.org/fhir/audit-entity-type",
+              "code": "1",
+              "display": "Person"
+            },
+            "role": {
+              "system": "http://hl7.org/fhir/object-role",
+              "code": "1",
+              "display": "Patient"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "AuditEvent"
+      }
+    }
+  ]
+}

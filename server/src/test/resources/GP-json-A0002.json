@@ -1,0 +1,7246 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://{{care_planning_url}}/c3cloud/fhir-secure/Patient/A0002",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "A0002",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.c3-cloud.eu/Identifier/real",
+            "value": "A0002"
+          },
+          {
+            "system": "http://www.c3-cloud.eu/Identifier/pseudonym",
+            "value": "2"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "A0002",
+            "given": [
+              "Patient"
+            ]
+          }
+        ],
+        "gender": "female",
+        "address": [
+          {
+            "text": "2 Abbey Rd, London NW8 0AH, UK [provided for demo/test]"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/A0002"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "K550",
+              "display": "Erosion - cervix - cautery"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1978-01-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Amlodipine 5mg tablets"
+            }
+          ]
+        },
+        "effectiveDateTime": "2015-03-17T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "One To Be Taken Each Day for blood pressure",
+            "doseQuantity": {
+              "value": 28,
+              "unit": "tablet"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "229",
+              "display": "O/E - height"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-17T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00003",
+            "display": "E00003"
+          }
+        ],
+        "valueQuantity": {
+          "value": 152.4,
+          "unit": "cm"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "notGiven": false,
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "65FA",
+              "display": "1st hepatitis A vaccination"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "date": "2004-12-03T00:00:00+00:00",
+        "primarySource": false,
+        "practitioner": [
+          {
+            "actor": {
+              "reference": "Practitioner/G00003",
+              "display": "G00003"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "4",
+              "display": "Laboratory procedures"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2017-11-14T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "G83",
+              "display": "Varicose veins of leg -"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1978-01-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Beclometasone 50micrograms/dose nasal spray"
+            }
+          ]
+        },
+        "effectiveDateTime": "2015-06-17T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "Two Sprays To Be Used In Each Nostril Twice A Day",
+            "doseQuantity": {
+              "value": 200,
+              "unit": "dose"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "22A",
+              "display": "O/E - weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-17T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00003",
+            "display": "E00003"
+          }
+        ],
+        "valueQuantity": {
+          "value": 84,
+          "unit": "kg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "notGiven": false,
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "6564",
+              "display": "Booster tetanus vaccination"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "date": "2004-12-03T00:00:00+00:00",
+        "primarySource": false,
+        "practitioner": [
+          {
+            "actor": {
+              "reference": "Practitioner/G00003",
+              "display": "G00003"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "4131",
+              "display": "Blood test requested"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-17T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00011",
+            "display": "D00011"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "L39",
+              "display": "Caesarean section"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1980-01-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Beconase Aqueous 50micrograms/dose nasal spray (GlaxoSmithKline UK Ltd)"
+            }
+          ]
+        },
+        "effectiveDateTime": "1996-07-05T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "two puffs twice daily",
+            "doseQuantity": {
+              "value": 2,
+              "unit": "nspr"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "22K",
+              "display": "Body mass index"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-17T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00003",
+            "display": "E00003"
+          }
+        ],
+        "valueQuantity": {
+          "value": 36.17,
+          "unit": "kg/m2"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "notGiven": false,
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "6521",
+              "display": "First typhoid vaccination"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "date": "2006-01-13T00:00:00+00:00",
+        "primarySource": false,
+        "practitioner": [
+          {
+            "actor": {
+              "reference": "Practitioner/G00005",
+              "display": "G00005"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "4131",
+              "display": "Blood test requested"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-01T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "L39",
+              "display": "Caesarean section -"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1984-01-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Cimetidine 400mg tablets"
+            }
+          ]
+        },
+        "effectiveDateTime": "1997-03-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "take one twice daily",
+            "doseQuantity": {
+              "value": 60,
+              "unit": "tabs"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "246",
+              "display": "O/E - blood pressure reading"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-16T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00004",
+            "display": "E00004"
+          }
+        ],
+        "valueQuantity": {
+          "value": 133,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "notGiven": false,
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "6523",
+              "display": "Booster typhoid vaccination"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "date": "2013-07-23T00:00:00+00:00",
+        "primarySource": false,
+        "practitioner": [
+          {
+            "actor": {
+              "reference": "Practitioner/G00015",
+              "display": "G00015"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "41D0",
+              "display": "Blood sample taken"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00001",
+            "display": "D00001"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "G83",
+              "display": "Varicose veins of leg -"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1986-01-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Co-trimoxazole 80mg/400mg tablets"
+            }
+          ]
+        },
+        "effectiveDateTime": "1989-04-10T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "take two twice a day",
+            "doseQuantity": {
+              "value": 20,
+              "unit": "tabs"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "246",
+              "display": "O/E - blood pressure reading"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2017-11-14T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00005",
+            "display": "E00005"
+          }
+        ],
+        "valueQuantity": {
+          "value": 130,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "notGiven": false,
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "65K5",
+              "display": "Low dose diphtheria, tetanus and inactivated polio vaccinati"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "date": "2017-08-24T00:00:00+00:00",
+        "primarySource": false,
+        "practitioner": [
+          {
+            "actor": {
+              "reference": "Practitioner/G00009",
+              "display": "G00009"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "41D0",
+              "display": "Blood sample taken"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00001",
+            "display": "D00001"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "N0",
+              "display": "Joint disorders arthropathy"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1992-12-04T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Flucloxacillin 500mg capsules"
+            }
+          ]
+        },
+        "effectiveDateTime": "2013-02-28T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "take one 4 times/day",
+            "doseQuantity": {
+              "value": 28,
+              "unit": "cap"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "246",
+              "display": "O/E - blood pressure reading"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-10-27T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00006",
+            "display": "E00006"
+          }
+        ],
+        "valueQuantity": {
+          "value": 124,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "notGiven": false,
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "65FD",
+              "display": "Booster hepatitis A vaccin."
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "date": "2018-03-07T00:00:00+00:00",
+        "primarySource": false,
+        "practitioner": [
+          {
+            "actor": {
+              "reference": "Practitioner/G00011",
+              "display": "G00011"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "41D0",
+              "display": "Blood sample taken"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00007",
+            "display": "D00007"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1992-12-04T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Gaviscon  Liquid"
+            }
+          ]
+        },
+        "effectiveDateTime": "1997-03-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "20ml 3 times/day",
+            "doseQuantity": {
+              "value": 200,
+              "unit": "ml"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "2469",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-10-27T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00006",
+            "display": "E00006"
+          }
+        ],
+        "valueQuantity": {
+          "value": 124,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "notGiven": false,
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "6523",
+              "display": "Booster typhoid vaccination"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "date": "2018-03-07T00:00:00+00:00",
+        "primarySource": false,
+        "practitioner": [
+          {
+            "actor": {
+              "reference": "Practitioner/G00011",
+              "display": "G00011"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "423",
+              "display": "Haemoglobin estimation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 154,
+          "unit": "g/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "TC5",
+              "display": "Fall - on same level painful"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1996-02-12T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Nasobec Aqueous 50micrograms/dose nasal spray (Teva UK Ltd)"
+            }
+          ]
+        },
+        "effectiveDateTime": "1997-05-02T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "two puffs twice daily",
+            "doseQuantity": {
+              "value": 1,
+              "unit": "nspr"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "2469",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-16T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00004",
+            "display": "E00004"
+          }
+        ],
+        "valueQuantity": {
+          "value": 133,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "424",
+              "display": "Full blood count - FBC"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1996-02-12T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Phenoxymethylpenicillin 250mg tablets"
+            }
+          ]
+        },
+        "effectiveDateTime": "2000-12-18T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "take one 4 times/day",
+            "doseQuantity": {
+              "value": 28,
+              "unit": "tab"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "2469",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2017-11-14T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00005",
+            "display": "E00005"
+          }
+        ],
+        "valueQuantity": {
+          "value": 130,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "4258",
+              "display": "Haematocrit"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 0.469,
+          "unit": "l/l"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1996-03-06T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Revaxis vaccine suspension for injection 0.5ml pre-filled syringes (Sanofi Pasteur)"
+            }
+          ]
+        },
+        "effectiveDateTime": "2017-08-24T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "0.5ml",
+            "doseQuantity": {
+              "value": 1,
+              "unit": "pre-filled disposable injection"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "246A",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-10-27T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00006",
+            "display": "E00006"
+          }
+        ],
+        "valueQuantity": {
+          "value": 75,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "426",
+              "display": "Red blood cell (RBC) count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 5.07,
+          "unit": "10*12/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1996-04-10T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "display": "Typhim Vi 25micrograms/0.5ml vaccine solution for injection pre-filled syringes (Sanofi Pasteur)"
+            }
+          ]
+        },
+        "effectiveDateTime": "2018-03-07T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "taken": "unk",
+        "dosage": [
+          {
+            "text": "For Intramuscular Injection",
+            "doseQuantity": {
+              "value": 1,
+              "unit": "pre-filled disposable injection"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "246A",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-16T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00004",
+            "display": "E00004"
+          }
+        ],
+        "valueQuantity": {
+          "value": 85,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "429",
+              "display": "Mean corpusc. Hb. conc. (MCHC)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 328,
+          "unit": "g/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1996-06-12T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "246A",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2017-11-14T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/E00005",
+            "display": "E00005"
+          }
+        ],
+        "valueQuantity": {
+          "value": 71,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42A",
+              "display": "Mean corpuscular volume (MCV)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 92.5,
+          "unit": "fL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "F56y",
+              "display": "Labyrinthine disorders NOS"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1996-06-26T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42B",
+              "display": "Plasma viscosity"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 1.68,
+          "unit": "mPa.s"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "F516",
+              "display": "Eustachian tube"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1996-07-05T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42H",
+              "display": "Total white cell count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 7.13,
+          "unit": "10*9/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R07",
+              "display": "Digestive system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1997-03-03T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42J",
+              "display": "Neutrophil count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.13,
+          "unit": "10*9/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "M221",
+              "display": "Keratosis, senile"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1997-09-03T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42K",
+              "display": "Eosinophil count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 0.32,
+          "unit": "10*9/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R02",
+              "display": "Skin/subcutaneous tissu diseas"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1997-09-03T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42L",
+              "display": "Basophil count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 0.05,
+          "unit": "10*9/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "K590",
+              "display": "Amenorrhoea"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "1997-11-13T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42M",
+              "display": "Lymphocyte count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 2,
+          "unit": "10*9/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2000-02-03T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42N",
+              "display": "Monocyte count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 0.63,
+          "unit": "10*9/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2003-02-20T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42P",
+              "display": "Platelet count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 173,
+          "unit": "10*9/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2003-02-20T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42T",
+              "display": "Serum vitamin B12"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 467,
+          "unit": "ng/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2003-03-21T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42U5",
+              "display": "Serum folate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.8,
+          "unit": "ug/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2003-04-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42W5",
+              "display": "HbA1c levl - IFCC standardised"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ],
+        "valueQuantity": {
+          "value": 113,
+          "unit": "mmol/mol"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2003-04-02T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42W5",
+              "display": "HbA1c levl - IFCC standardised"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ],
+        "valueQuantity": {
+          "value": 113,
+          "unit": "mmol/mol"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-01-05T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42W5",
+              "display": "HbA1c levl - IFCC standardised"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 99,
+          "unit": "mmol/mol"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-01-05T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "42YD",
+              "display": "B12/folate level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-01-30T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "442W",
+              "display": "Serum TSH level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 1.14,
+          "unit": "mu/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-02-02T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44CS",
+              "display": "Serum C reactive protein level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 9,
+          "unit": "mg/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-02-27T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44D6",
+              "display": "Liver function test"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-03-23T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44EC",
+              "display": "Serum total bilirubin level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 6,
+          "unit": "umol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-04-20T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44F3",
+              "display": "Total alkaline phosphatase"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 132,
+          "unit": "u/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-04-26T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44F3",
+              "display": "Total alkaline phosphatase"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 132,
+          "unit": "u/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-09-30T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44GB",
+              "display": "Serum ALT level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 34,
+          "unit": "u/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2004-12-03T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44I4",
+              "display": "Serum potassium"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.4,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2005-09-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44I4",
+              "display": "Serum potassium"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.2,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2006-01-13T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44I4",
+              "display": "Serum potassium"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.3,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2006-08-04T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44I5",
+              "display": "Serum sodium"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 141,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2007-01-11T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44I5",
+              "display": "Serum sodium"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ],
+        "valueQuantity": {
+          "value": 136,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2007-01-15T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44I5",
+              "display": "Serum sodium"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 140,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2007-08-16T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44I8",
+              "display": "Serum calcium"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 2.31,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2007-10-05T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J3",
+              "display": "Serum creatinine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "umol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R02",
+              "display": "Skin/subcutaneous tissu diseas"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2008-02-13T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J3",
+              "display": "Serum creatinine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "umol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R02",
+              "display": "Skin/subcutaneous tissu diseas"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2008-02-13T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J3",
+              "display": "Serum creatinine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "umol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R02",
+              "display": "Skin/subcutaneous tissu diseas"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2008-03-27T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J3",
+              "display": "Serum creatinine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "umol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R02",
+              "display": "Skin/subcutaneous tissu diseas"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2008-04-18T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J3",
+              "display": "Serum creatinine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "umol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R02",
+              "display": "Skin/subcutaneous tissu diseas"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2008-04-24T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J3",
+              "display": "Serum creatinine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "umol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R02",
+              "display": "Skin/subcutaneous tissu diseas"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2008-04-28T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J9",
+              "display": "Serum urea level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.8,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R02",
+              "display": "Skin/subcutaneous tissu diseas"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2008-05-07T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J9",
+              "display": "Serum urea level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.7,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2009-10-27T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44J9",
+              "display": "Serum urea level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 5,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2009-11-17T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44JB",
+              "display": "Urea and electrolytes"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2009-11-17T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44JB",
+              "display": "Urea and electrolytes"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "C11y3",
+              "display": "Impaired fasting glycaemia"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2010-02-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44JB",
+              "display": "Urea and electrolytes"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2013-01-11T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44lF",
+              "display": "Serum cholesterol/HDL ratio"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.4
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2013-01-11T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44lF",
+              "display": "Serum cholesterol/HDL ratio"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.4
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R05",
+              "display": "Circulatory system diseases"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2013-01-15T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44M3",
+              "display": "Serum total protein"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 74,
+          "unit": "g/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "C11y3",
+              "display": "Impaired fasting glycaemia"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2013-01-22T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44M4",
+              "display": "Serum albumin"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 43,
+          "unit": "g/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2013-02-28T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44M4",
+              "display": "Serum albumin"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 43,
+          "unit": "g/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R01",
+              "display": "Musculoskelet/connectiv"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2013-03-18T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44O",
+              "display": "Serum lipids"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "inactive",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "F5635",
+              "display": "Viral labyrinthitis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2014-09-19T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44P5",
+              "display": "Serum HDL cholesterol level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 1.1,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "G20",
+              "display": "Essential hypertension"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2015-03-17T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44P5",
+              "display": "Serum HDL cholesterol level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 1,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "N05z6-1",
+              "display": "Knee osteoarthritis NOS"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2016-09-15T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44PI",
+              "display": "Calculated LDL cholesterol lev"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 2.9,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "inactive",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "M223",
+              "display": "Seborrhoeic keratosis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2017-05-23T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44PJ",
+              "display": "Serum total cholesterol level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.8,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "G20",
+              "display": "Essential hypertension"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2017-11-14T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44PJ",
+              "display": "Serum total cholesterol level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.4,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "C10F",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2018-01-12T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44Q",
+              "display": "Serum triglycerides"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 1.8,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "C10F",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2018-01-17T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44TB",
+              "display": "Haemoglobin A1c level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "clinicalStatus": "inactive",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "R090B",
+              "display": "[D]Groin pain"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "onsetDateTime": "2018-02-01T00:00:00+00:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44TB",
+              "display": "Haemoglobin A1c level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44TB",
+              "display": "Haemoglobin A1c level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44TJ",
+              "display": "Blood glucose level"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 8.3,
+          "unit": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "44Z2",
+              "display": "Bone profile"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "451E",
+              "display": "GFR calculated abbreviatd MDRD"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-11-18T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "mL/min/1.73m2"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "451E",
+              "display": "GFR calculated abbreviatd MDRD"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-01-11T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00010",
+            "display": "D00010"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "mL/min/1.73m2"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "451E",
+              "display": "GFR calculated abbreviatd MDRD"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2018-02-06T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00009",
+            "display": "D00009"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "mL/min/1.73m2"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "tag": [
+            {
+              "code": "provider1:ehr:0.2"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.29",
+              "code": "5112",
+              "display": "Radiology requested"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/A0002",
+          "display": "Patient A0002"
+        },
+        "effectiveDateTime": "2016-09-15T00:00:00+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner/D00012",
+            "display": "D00012"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AuditEvent",
+        "type": {
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "code": "110107",
+          "display": "Import"
+        },
+        "subtype": [
+          {
+            "system": "http://www.c3-cloud.eu/fhir/audit-subtype",
+            "code": "record-sync",
+            "display": "Patient record sync"
+          }
+        ],
+        "action": "U",
+        "recorded": "2018-12-05T12:11:03.220+00:00",
+        "outcome": "0",
+        "agent": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://dicom.nema.org/resources/ontology/DCM",
+                    "code": "110152",
+                    "display": "Source Role ID"
+                  }
+                ]
+              }
+            ],
+            "userId": {
+              "value": "tis.c3-cloud.eu"
+            },
+            "name": "C3-Cloud TIS",
+            "requestor": true
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://dicom.nema.org/resources/ontology/DCM",
+                    "code": "110152",
+                    "display": "Destination Role ID"
+                  }
+                ]
+              }
+            ],
+            "userId": {
+              "value": "fhir.c3-cloud.eu"
+            },
+            "name": "C3-Cloud FHIR Repository",
+            "requestor": false,
+            "network": {
+              "address": "https://{{care_planning_url}}/c3cloud/fhir-secure/",
+              "type": "2"
+            }
+          }
+        ],
+        "source": {
+          "site": "C3-Cloud TIS",
+          "identifier": {
+            "value": "tis.c3-cloud.eu"
+          }
+        },
+        "entity": [
+          {
+            "reference": {
+              "reference": "Patient/A0002"
+            },
+            "type": {
+              "system": "http://hl7.org/fhir/audit-entity-type",
+              "code": "1",
+              "display": "Person"
+            },
+            "role": {
+              "system": "http://hl7.org/fhir/object-role",
+              "code": "1",
+              "display": "Patient"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "AuditEvent"
+      }
+    }
+  ]
+}

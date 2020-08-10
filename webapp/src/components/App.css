@@ -1,0 +1,46 @@
+
+.header-menu {
+  background-color: transparent; 
+  border-bottom: none;
+}
+
+.header-logo, .header-menu .header-menu-item, 
+.header-menu .header-menu-item > a {
+  color: white; 
+  font-weight: 600;
+}
+
+.header-submenu-item {
+  font-weight: 600;
+}
+
+.header-menu > .header-menu-item.ant-menu-item-selected,
+.header-menu > .header-menu-item.ant-menu-item-selected.ant-menu-item-active,
+.header-menu > .header-menu-item.ant-menu-submenu-selected,
+.header-menu > .header-menu-item.ant-menu-submenu-selected.ant-menu-submenu-active {
+  background-color: rgba(0,0,0,.1)
+}
+
+.header-menu > .header-menu-item.ant-menu-item-selected > a,
+.header-menu > .header-menu-item.ant-menu-item-selected.ant-menu-item-active > a,
+.header-menu > .header-menu-item.ant-menu-submenu-selected,
+.header-menu > .header-menu-item.ant-menu-submenu-selected.ant-menu-submenu-active > .ant-menu-submenu-title {
+  color: wheat;
+  font-weight: 700;
+}
+
+.header-menu > .header-menu-item.ant-menu-item-active,
+.header-menu > .header-menu-item.ant-menu-submenu-active {
+  background-color: rgba(255,255,255,.15)
+}
+
+.header-menu > .header-menu-item.ant-menu-item-active > a,
+.header-menu > .header-menu-item.ant-menu-submenu-active > .ant-menu-submenu-title {
+  /*font-weight: 700;*/
+  color: white
+}
+
+h2 {
+  color: teal;
+}
+
