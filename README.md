@@ -4,6 +4,8 @@ TIS is a full stack application comprised of Java backend, database and web fron
 
 C3-Cloud TIS enables patient data synchronization from local EHR to C3-Cloud. More specifically, TIS imports patient data from local EHR into C3-Cloud FHIR Repository either on demand or at scheduled intervals. 
 
+NOTE: TIS requires integration with a Semantic and Structural Mapper to convert responses from EHR systems to HL7 FHIR format. IT also requires a FHIR repository to push data into. Connections to both can be configured in the `application.yml`.
+
 The TIS application is still in development so functions (esp. tests) may not run as expected, if you find a bug, please report it to @omarisgreat
 
 - Programming language
