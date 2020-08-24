@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/286454731.svg)](https://zenodo.org/badge/latestdoi/286454731)
+
 # C3-Cloud Technical Interoperability Suite
 
 TIS is a full stack application comprised of Java backend, database and web frontend. 
